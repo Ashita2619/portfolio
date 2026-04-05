@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ashita Jawali | Multi-omics, Bioinformatics, AI/ML, Drug and Biomarker Discovery</title>
   <meta name="description" content="Ashita Jawali — Bioinformatician | Multi-omics, Bioinformatics, AI/ML, Drug and Biomarker Discovery | KDHE." />
+
   <style>
     :root {
       --bg: #0b1220;
@@ -28,9 +29,12 @@
       color: var(--text);
       line-height: 1.55;
       background:
-        radial-gradient(900px 600px at 12% 10%, rgba(122, 162, 255, .22), transparent 55%),
-        radial-gradient(900px 600px at 90% 18%, rgba(122, 255, 208, .14), transparent 55%),
-        var(--bg);
+        linear-gradient(rgba(11,18,32,0.85), rgba(11,18,32,0.85)),
+        url("Portfolio.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-filter: blur(2px)
     }
 
     a { color: var(--accent); text-decoration: none; }
@@ -90,7 +94,7 @@
       padding: 18px;
     }
 
-    .card h2 { margin: 0 0 10px; font-size: 16px; letter-spacing: .2px; }
+    .card h2 { margin: 0 0 10px; font-size: 16px; }
     .muted { color: var(--muted); }
     .cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
 
@@ -107,12 +111,7 @@
     }
 
     .btn.secondary { background: rgba(255, 255, 255, .04); }
-    .btn:hover { text-decoration: none; filter: brightness(1.05); }
     .kvs { display: grid; grid-template-columns: 130px 1fr; gap: 8px 12px; }
-    @media (max-width: 520px) { .kvs { grid-template-columns: 1fr; } }
-    .kvs .k { font-weight: 800; color: var(--text); }
-    .kvs .v { color: var(--muted); }
-    .section { display: grid; gap: 16px; margin-top: 16px; }
     .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
 
     .chip {
@@ -120,46 +119,18 @@
       align-items: center;
       padding: 5px 10px;
       font-size: 12px;
-      color: var(--text);
       border-radius: 999px;
       border: 1px solid rgba(122, 255, 208, .20);
       background: rgba(122, 255, 208, .10);
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    @media (max-width: 980px) { .projects-grid { grid-template-columns: 1fr; } }
-
-    .proj {
-      border: 1px solid var(--border);
-      background: var(--card2);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .proj img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-      background: rgba(0, 0, 0, .20);
-    }
-
-    .proj-body { padding: 14px; }
-    .proj-title { margin: 0 0 6px; font-weight: 900; }
-    .proj-desc { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
-    .proj-links a { margin-right: 10px; font-weight: 900; }
     .items { display: grid; gap: 10px; }
+
     .item {
-      padding: 12px 12px;
+      padding: 12px;
       border: 1px solid var(--border);
       border-radius: 14px;
       background: rgba(255, 255, 255, .03);
-      margin-bottom: 8px;
     }
 
     .item-top {
@@ -167,14 +138,11 @@
       justify-content: space-between;
       gap: 10px;
       flex-wrap: wrap;
-      align-items: baseline;
     }
 
     .item-title { font-weight: 900; }
     .item-meta { color: var(--muted); font-size: 13px; }
-    
-    .small { font-size: 12px; color: var(--muted); }
-    .divider { height: 1px; background: var(--border); margin: 12px 0; }
+
     footer {
       padding: 18px;
       text-align: center;
@@ -183,14 +151,6 @@
       border-top: 1px solid var(--border);
       background: rgba(0, 0, 0, .15);
     }
-
-    @media print {
-      body { background: white; color: #111; }
-      a { color: #111; text-decoration: none; }
-      .pill, .btn { display: none !important; }
-      .card { box-shadow: none; background: white; border: 1px solid #ddd; }
-      footer { display: none; }
-    }
   </style>
 </head>
 
@@ -198,13 +158,12 @@
   <header class="wrap">
     <div class="top">
       <div class="brand">
-        <div class="avatar" id="avatarBox" aria-hidden="true">
-          <img src="Portfolio.png" alt="Ashita Jawali">
+        <div class="avatar">
+          <img src="Ashita_Photo.png" alt="Ashita Jawali">
         </div>
         <div>
           <h1 id="name"></h1>
           <div class="headline" id="headline"></div>
-          <div class="subline" id="subline"></div>
         </div>
       </div>
 
@@ -213,7 +172,6 @@
         <a class="pill" href="#projects">Projects</a>
         <a class="pill" href="#experience">Experience</a>
         <a class="pill" href="#publications">Publications</a>
-        <a class="pill" href="#abstracts">Abstracts</a>
         <a class="pill" href="#contact">Contact</a>
       </nav>
     </div>
@@ -225,16 +183,7 @@
         <h2>About</h2>
         <p class="muted" id="aboutText"></p>
         <div class="cta" id="cta"></div>
-        <div class="divider"></div>
-        <div>
-          <div class="item-title">Core areas</div>
-          <div class="chips" id="focusChips"></div>
-        </div>
-      </section>
-
-      <section class="card" id="projects">
-        <h2>Selected projects</h2>
-        <div class="projects-grid" id="projectsGrid"></div>
+        <div class="chips" id="focusChips"></div>
       </section>
 
       <section class="card" id="experience">
@@ -246,39 +195,17 @@
         <h2>Publications</h2>
         <div class="items" id="pubItems"></div>
       </section>
-
-      <section class="card" id="abstracts">
-        <h2>Conference abstracts</h2>
-        <div class="items" id="absItems"></div>
-      </section>
     </div>
 
     <div class="section">
       <aside class="card">
         <h2>Quick info</h2>
         <div class="kvs" id="quickInfo"></div>
-        <div class="divider"></div>
-        <div class="small" id="updated"></div>
       </aside>
 
-      <aside class="card" id="education">
-        <h2>Education</h2>
-        <div class="items" id="eduItems"></div>
-      </aside>
-
-      <aside class="card" id="skills">
+      <aside class="card">
         <h2>Skills</h2>
         <div class="chips" id="skillChips"></div>
-      </aside>
-
-      <aside class="card" id="languages">
-        <h2>Languages</h2>
-        <div class="chips" id="languageChips"></div>
-      </aside>
-
-      <aside class="card" id="memberships">
-        <h2>Memberships</h2>
-        <div class="items" id="membershipItems"></div>
       </aside>
 
       <aside class="card" id="contact">
@@ -298,8 +225,6 @@
       headline: "Bioinformatician | Multi-omics | AI/ML | Drug Discovery | Biomarker Discovery | NGS | Public Health Genomics",
       location: "Topeka, Kansas, USA",
       emailPrimary: "ashit.bt18@bmsce.ac.in",
-      github: "https://github.com/yourgithub",
-      linkedin: "https://linkedin.com/in/yourlinkedin",
       updated: "Updated: 2026",
 
       links: [
@@ -308,78 +233,35 @@
         { label: "CV (PDF)", url: "AshitaJawali_CV.pdf" }
       ],
 
-      about: "Bioinformatician working at the intersection of multi-omics, machine learning, and drug discovery. My work focuses on analyzing large-scale genomic and transcriptomic datasets, building reproducible bioinformatics pipelines, and applying computational approaches to biomarker discovery and disease research.",
+      about: "Bioinformatician working at the intersection of multi-omics, machine learning, and drug discovery. My work focuses on analyzing genomic and transcriptomic datasets, building reproducible pipelines, and applying computational methods to biomarker discovery and disease research.",
 
-      focus: [
-        "Bioinformatics", "Multi-omics", "Machine Learning", "Drug Discovery",
-        "Biomarker Discovery", "RNA-seq", "Variant Calling", "NGS Analysis",
-        "Public Health Genomics", "Pipeline Development"
-      ],
+      focus: ["Bioinformatics","Multi-omics","Machine Learning","Drug Discovery","Biomarker Discovery","RNA-seq","Variant Calling","NGS Analysis"],
 
       experience: [
         {
           title: "Bioinformatician",
           org: "Kansas Department of Health and Environment",
           location: "Kansas, USA",
-          dates: "2024 – Present",
-          bullets: [
-            "Analyzed NGS data for public health genomics and pathogen surveillance.",
-            "Developed bioinformatics pipelines for genomic data processing."
-          ]
-        },
-        {
-          title: "Graduate Teaching Assistant",
-          org: "Carnegie Mellon University",
-          location: "Pennsylvania, USA",
-          dates: "2022 – 2023"
+          dates: "2024 – Present"
         },
         {
           title: "Research Intern",
-          org: "Dr. Hiller Lab, CMU",
-          location: "Pennsylvania, USA",
-          dates: "2022 – 2023",
-          bullets: [
-            "Analyzed mobile elements in Streptococcus thermophilus, identifying transporters and regulatory regions",
-            "Built Python-based pipelines for sequence annotation and comparative genomics",
-            "Performed BLAST, multiple sequence alignment, and domain analysis",
-            "Conducted phylogenetic analysis to trace gene transfer events"
-          ]
-        },
-        {
-          title: "Associate Consultant",
-          org: "IQVIA",
-          location: "Karnataka, India",
-          dates: "2022 – 2022",
-          bullets: [
-            "Queried and analyzed large-scale clinical datasets using SQL/PLSQL",
-            "Built dashboards in Power BI to communicate pharmacovigilance insights",
-            "Gained exposure to drug development lifecycle and regulatory systems (Argus Safety)"
-          ]
+          org: "Carnegie Mellon University",
+          location: "USA",
+          dates: "2022 – 2023"
         }
       ],
 
-      education: [
-        { title: "Master's Degree", org: "Carnegie Mellon University", dates: "2023" },
-        { title: "Bachelor's Degree", org: "BMS College of Engineering", dates: "2022" }
-      ],
-
-      skills: ["Python", "R", "Bioinformatics", "NGS", "Linux", "Nextflow", "Docker"],
-      languages: ["English", "Hindi", "Kannada", "Telugu"],
-      
       publications: [
-        { 
-          title: "Methods for the Detection and Quantification of Micro and Nanoplastics- A Review", 
-          venue: "Asian Journal of Biotechnology and Bioresource Technology", 
-          year: "2021", 
-          url: "https://www.researchgate.net/publication/355277721_Methods_for_the_Detection_and_Quantification_of_Micro_and_Nanoplastics-_A_Review" 
+        {
+          title: "Methods for the Detection and Quantification of Micro and Nanoplastics- A Review",
+          venue: "Asian Journal of Biotechnology and Bioresource Technology",
+          year: "2021",
+          url: "https://www.researchgate.net/publication/355277721"
         }
       ],
 
-      abstracts: [], // Empty for now
-
-      memberships: [
-        { title: "International Society for Computational Biology (ISCB)", dates: "2026 – Present" }
-      ],
+      skills: ["Python","R","NGS","Bioinformatics","Linux","Nextflow","Docker"],
 
       contact: {
         email: "ashit.bt18@bmsce.ac.in",
@@ -387,28 +269,21 @@
       }
     };
 
-    // ---------- Rendering Engine ----------
     const el = (id) => document.getElementById(id);
-    const safeLink = (u) => (u && u !== "#") ? u : "#";
-
-    // Header & Intro
     el("name").textContent = SITE.name;
     el("name2").textContent = SITE.name;
     el("headline").textContent = SITE.headline;
-    el("updated").textContent = SITE.updated || "";
-    el("year").textContent = new Date().getFullYear();
     el("aboutText").textContent = SITE.about;
+    el("year").textContent = new Date().getFullYear();
 
-    // CTA Buttons
     SITE.links.forEach(b => {
       const a = document.createElement("a");
-      a.className = "btn" + (b.primary ? "" : " secondary");
-      a.href = safeLink(b.url);
+      a.className = "btn";
+      a.href = b.url;
       a.textContent = b.label;
       el("cta").appendChild(a);
     });
 
-    // Core Area Chips
     SITE.focus.forEach(t => {
       const s = document.createElement("span");
       s.className = "chip";
@@ -416,7 +291,6 @@
       el("focusChips").appendChild(s);
     });
 
-    // Quick Info Table
     const quickRows = [["Location", SITE.location], ["Email", SITE.emailPrimary]];
     quickRows.forEach(([k, v]) => {
       const kDiv = document.createElement("div"); kDiv.className = "k"; kDiv.textContent = k;
@@ -424,71 +298,32 @@
       el("quickInfo").appendChild(kDiv); el("quickInfo").appendChild(vDiv);
     });
 
-    // Experience (with Bullets)
     SITE.experience.forEach(e => {
       const d = document.createElement("div");
       d.className = "item";
-      const bulletHtml = e.bullets 
-        ? `<ul class="muted small" style="margin-top: 8px; padding-left: 20px;">
-            ${e.bullets.map(b => `<li>${b}</li>`).join('')}
-           </ul>` 
-        : '';
-      d.innerHTML = `
-        <div class="item-top"><div class="item-title">${e.title}</div><div class="item-meta">${e.dates}</div></div>
-        <div class="muted">${e.org} · ${e.location}</div>
-        ${bulletHtml}`;
+      d.innerHTML = `<div class="item-top"><div class="item-title">${e.title}</div><div class="item-meta">${e.dates}</div></div>
+                     <div class="muted">${e.org} · ${e.location}</div>`;
       el("expItems").appendChild(d);
     });
 
-    // Skills & Languages
-    SITE.skills.forEach(s => {
-      const chip = document.createElement("span"); chip.className = "chip"; chip.textContent = s;
-      el("skillChips").appendChild(chip);
-    });
-    SITE.languages.forEach(l => {
-      const chip = document.createElement("span"); chip.className = "chip"; chip.textContent = l;
-      el("languageChips").appendChild(chip);
-    });
-
-    // Education
-    SITE.education.forEach(edu => {
-      const d = document.createElement("div");
-      d.className = "item";
-      d.innerHTML = `<div class="item-top"><div class="item-title">${edu.title}</div><div class="item-meta">${edu.dates}</div></div>
-                     <div class="muted">${edu.org}</div>`;
-      el("eduItems").appendChild(d);
-    });
-
-    // Publications
     SITE.publications.forEach(p => {
       const d = document.createElement("div");
       d.className = "item";
-      d.innerHTML = `<div class="item-top">
-                       <div class="item-title"><a href="${p.url}" target="_blank">${p.title}</a></div>
-                       <div class="item-meta">${p.venue} · ${p.year}</div>
-                     </div>`;
+      d.innerHTML = `<div class="item-title"><a href="${p.url}" target="_blank">${p.title}</a></div>
+                     <div class="item-meta">${p.venue} · ${p.year}</div>`;
       el("pubItems").appendChild(d);
     });
 
-    // Abstracts Fallback
-    if (SITE.abstracts.length === 0) {
-      el("absItems").innerHTML = '<div class="muted">No abstracts listed yet.</div>';
-    }
-
-    // Memberships
-    SITE.memberships.forEach(m => {
-      const d = document.createElement("div");
-      d.className = "item";
-      d.innerHTML = `<div class="item-top"><div class="item-title">${m.title}</div><div class="item-meta">${m.dates}</div></div>`;
-      el("membershipItems").appendChild(d);
+    SITE.skills.forEach(s => {
+      const chip = document.createElement("span");
+      chip.className = "chip";
+      chip.textContent = s;
+      el("skillChips").appendChild(chip);
     });
 
-    // Contact Box
     el("contactBlocks").innerHTML = `
       <div class="item"><div class="item-title">Email</div><div class="muted">${SITE.contact.email}</div></div>
       <div class="item"><div class="item-title">Location</div><div class="muted">${SITE.contact.location}</div></div>`;
-
   </script>
 </body>
 </html>
-```
