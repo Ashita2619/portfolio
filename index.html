@@ -379,11 +379,16 @@
       ],
 
       abstracts: [
-        { 1. Poster Presentation — ISCB-UK 2026 (Selected)
-          2. Research Hub Grant Proposal Submitted:
-             “Early Detection and Personalized Drug Discovery for Pancreatic Cancer Using Multi‑Omics and AI/ML Approaches”
-             Link: https://www.researchhub.com/proposal/4347/early-detection-and-personalized-drug-discovery-for-pancreatic-cancer-using-multi-omics-and-aiml-approaches
-          3. ISMB 2026 abstract submitted for talk and poster
+        {
+          title: "Poster presentation - ISCB-UK 2026 (selected)"
+        },
+        {
+          title: "Research Hub Grant Proposal Submitted",
+          description: “Early Detection and Personalized Drug Discovery for Pancreatic Cancer Using Multi‑Omics and AI/ML Approaches”
+          url: "https://www.researchhub.com/proposal/4347/early-detection-and-personalized-drug-discovery-for-pancreatic-cancer-using-multi-omics-and-aiml-approaches"
+        },
+        {
+         title: "ISMB 2026 abstract submitted for talk and poster"
         }
       ], 
 
@@ -481,9 +486,18 @@
     });
 
     // Abstracts Fallback
-    if (SITE.abstracts.length === 0) {
-      el("absItems").innerHTML = '<div class="muted">No abstracts listed yet.</div>';
-    }
+    SITE.abstracts.forEach(a => {
+      const d = document.createElement("div");
+      d.className = "item";
+
+      d.innerHTML = `
+        <div class="item-title">
+          ${a.url ? `<a href="${a.url}" target="_blank">${a.title}</a>` : a.title}
+        </div>
+        ${a.description ? `<div class="muted small">${a.description}</div>` : ""}
+        `;
+         el("absItems").appendChild(d);
+    });
 
     // Memberships
     SITE.memberships.forEach(m => {
