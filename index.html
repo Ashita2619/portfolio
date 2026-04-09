@@ -31,13 +31,11 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
       line-height: 1.55;
-      background:
-        linear-gradient(rgba(11,18,32,0.85), rgba(11,18,32,0.85)),
-        url("Portfolio.png");
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(rgba(11,18,32,0.85), rgba(11,18,32,0.85)), 
+                  radial-gradient(circle at 20% 50%, rgba(122, 162, 255, 0.1), transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(122, 255, 208, 0.1), transparent 50%);
       background-attachment: fixed;
-      background-filter: blur(2px);
+      background-color: var(--bg);
     }
 
     a { 
@@ -256,62 +254,6 @@
       font-weight: 500;
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 980px) { 
-      .projects-grid { grid-template-columns: 1fr; } 
-    }
-
-    .proj {
-      border: 1px solid var(--border);
-      background: var(--card2);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .proj:hover {
-      border-color: rgba(122, 162, 255, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .proj img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-      background: rgba(0, 0, 0, .20);
-    }
-
-    .proj-body { 
-      padding: 14px; 
-    }
-
-    .proj-title { 
-      margin: 0 0 6px; 
-      font-weight: 900;
-    }
-
-    .proj-desc { 
-      margin: 0 0 10px; 
-      font-size: 14px; 
-      color: var(--muted); 
-    }
-
-    .proj-links { 
-      margin-top: 8px; 
-    }
-
-    .proj-links a { 
-      margin-right: 10px; 
-      font-weight: 900; 
-    }
-
     .items { 
       display: grid; 
       gap: 10px; 
@@ -374,6 +316,23 @@
 
     .item-bullets li {
       margin-bottom: 4px;
+    }
+
+    .item-links {
+      margin-top: 8px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .item-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .item-links a:hover {
+      text-decoration: underline;
     }
 
     .small { 
@@ -462,42 +421,95 @@
         </div>
       </section>
 
-      <!-- PROJECTS SECTION -->
+      <!-- PROJECTS SECTION - SIMPLE TEXT ONLY -->
       <section class="card" id="projects">
-        <h2>Selected Projects</h2>
-        <div class="projects-grid">
-          <div class="proj">
-            <img src="https://via.placeholder.com/400x180?text=PDACmod" alt="PDACmod Project">
-            <div class="proj-body">
-              <div class="proj-title">PDACmod</div>
-              <div class="proj-desc">Deep learning pipeline for discovering dual-targeted KRAS/SMAD4 inhibitors for pancreatic cancer drug discovery.</div>
-              <div class="proj-links">
-                <a href="https://github.com/omicscodeathon/pdacmod" target="_blank">GitHub</a>
-                <a href="#">Docs</a>
-              </div>
+        <h2>Academic Projects</h2>
+        <div class="items">
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Novel Biomarker Prediction for Lung Cancer</div>
+              <div class="item-meta">Dec 2023</div>
+            </div>
+            <div class="muted">Carnegie Mellon University</div>
+            <ul class="item-bullets">
+              <li>Performed RNA-seq preprocessing, normalization, and differential expression analysis for cancer biomarker discovery</li>
+              <li>Applied machine learning and feature selection methods to identify predictive gene signatures (F1 scores 0.71-0.85)</li>
+              <li>Conducted pathway-level interpretation to contextualize gene expression changes in tumor biology</li>
+              <li>Generated publication-ready visualizations summarizing differential expression and predictive modeling performance</li>
+            </ul>
+            <div class="item-links">
+              <a href="https://github.com/Ashita2619/Novel-Biomarker-Prediction-for-Lung-Cancer" target="_blank">GitHub</a>
             </div>
           </div>
 
-          <div class="proj">
-            <img src="https://via.placeholder.com/400x180?text=BioWordle" alt="BioWordle Project">
-            <div class="proj-body">
-              <div class="proj-title">BioWordle</div>
-              <div class="proj-desc">Biology-themed Wordle game where players guess five-letter bioinformatics and biology terms. Built with HTML, CSS, JavaScript, Python, and Flask.</div>
-              <div class="proj-links">
-                <a href="https://github.com/Ashita2619/BioWordle" target="_blank">GitHub</a>
-              </div>
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Factors Impacting US COVID-19 Vaccine Adoption: A Statistical Exploration</div>
+              <div class="item-meta">Dec 2023</div>
+            </div>
+            <div class="muted">Carnegie Mellon University</div>
+            <ul class="item-bullets">
+              <li>Applied ML models (Random Forest, XGBoost, SVM) to predict vaccine hesitancy based on socioeconomic factors</li>
+              <li>Analyzed large-scale public health datasets to identify key drivers of vaccine adoption disparities</li>
+            </ul>
+            <div class="item-links">
+              <a href="https://github.com/Ashita2619/COVID-19-Vaccine-Adoption-A-Statistical-Exploration" target="_blank">GitHub</a>
             </div>
           </div>
 
-          <div class="proj">
-            <img src="https://via.placeholder.com/400x180?text=Lung+Cancer+Biomarkers" alt="Lung Cancer Biomarkers">
-            <div class="proj-body">
-              <div class="proj-title">Novel Biomarker Prediction for Lung Cancer</div>
-              <div class="proj-desc">RNA-seq analysis and machine learning pipeline to identify novel biomarkers for lung cancer prognosis and treatment selection.</div>
-              <div class="proj-links">
-                <a href="#">Publication</a>
-              </div>
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">NexTSS: An ML Pipeline for Transcription Start Site Annotation</div>
+              <div class="item-meta">Jan 2023</div>
             </div>
+            <div class="muted">Carnegie Mellon University</div>
+            <ul class="item-bullets">
+              <li>Developed a deep learning model for transcription start site detection using PyTorch and HPC systems</li>
+              <li>Implemented reproducible training workflows and cross-species validation</li>
+              <li>Designed modular data preprocessing and evaluation pipelines, mirroring production ML development patterns</li>
+            </ul>
+            <div class="item-links">
+              <a href="https://github.com/Ashita2619/Masters-Journey-Bioinformatics/blob/main/03713_tss_project.tar.gz" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Prediction of Diabetes Based on Multiple Diagnostic and Lifestyle Features</div>
+              <div class="item-meta">Jan 2023</div>
+            </div>
+            <div class="muted">Carnegie Mellon University</div>
+            <ul class="item-bullets">
+              <li>Developed a random forest-based predictive model for diabetes risk assessment, achieving 82.1% accuracy</li>
+              <li>Performed feature engineering and hyperparameter optimization for model performance</li>
+            </ul>
+            <div class="item-links">
+              <a href="https://github.com/Ashita2619/Diabetes-Prediction" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">In-Silico Approach of Inhibitors for SARS-COV2</div>
+              <div class="item-meta">Jul 2022</div>
+            </div>
+            <div class="muted">B.M.S. College of Engineering</div>
+            <ul class="item-bullets">
+              <li>Conducted protein-ligand docking using iGEMDOCK to identify candidate inhibitory compounds targeting viral proteins</li>
+              <li>Performed structural dataset curation and molecular interaction analysis supporting therapeutic discovery</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Repurposing of Drugs and Combinatorial Approach for AML</div>
+              <div class="item-meta">Jun 2021</div>
+            </div>
+            <div class="muted">B.M.S. College of Engineering</div>
+            <ul class="item-bullets">
+              <li>Performed structure-based virtual screening and ligand docking to evaluate candidate compounds</li>
+              <li>Applied computational structural biology approaches to support therapeutic discovery efforts</li>
+            </ul>
           </div>
         </div>
       </section>
