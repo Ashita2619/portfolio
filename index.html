@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ashita Jawali | Multi-omics, Bioinformatics, AI/ML, Drug and Biomarker Discovery</title>
+  <title>Ashita Jawali | Bioinformatician | Multi-omics, AI/ML, Drug Discovery</title>
   <meta name="description" content="Ashita Jawali — Bioinformatician | Multi-omics, Bioinformatics, AI/ML, Drug and Biomarker Discovery | KDHE." />
   <style>
     :root {
@@ -22,24 +22,42 @@
 
     * { box-sizing: border-box; }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
       line-height: 1.55;
-      background:
-        linear-gradient(rgba(11,18,32,0.85), rgba(11,18,32,0.85)),
-        url("Portfolio.png");
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(rgba(11,18,32,0.85), rgba(11,18,32,0.85)), 
+                  radial-gradient(circle at 20% 50%, rgba(122, 162, 255, 0.1), transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(122, 255, 208, 0.1), transparent 50%);
       background-attachment: fixed;
-      background-filter: blur(2px);
+      background-color: var(--bg);
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 18px; }
-    header { padding: 44px 0 14px; }
+    a { 
+      color: var(--accent); 
+      text-decoration: none; 
+      transition: all 0.2s ease;
+    }
+    a:hover { 
+      text-decoration: underline; 
+      filter: brightness(1.2);
+    }
+
+    .wrap { 
+      max-width: var(--max); 
+      margin: 0 auto; 
+      padding: 0 18px; 
+    }
+
+    header { 
+      padding: 44px 0 14px; 
+      border-bottom: 1px solid var(--border);
+    }
 
     .top {
       display: flex;
@@ -49,7 +67,12 @@
       flex-wrap: wrap;
     }
 
-    .brand { display: flex; align-items: center; gap: 14px; min-width: 260px; }
+    .brand { 
+      display: flex; 
+      align-items: center; 
+      gap: 14px; 
+      min-width: 260px; 
+    }
 
     .avatar {
       width: 72px;
@@ -62,11 +85,46 @@
       flex: 0 0 auto;
     }
 
-    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    h1 { margin: 0; font-size: 26px; letter-spacing: .2px; }
-    .headline { margin: 5px 0 0; font-size: 14px; color: var(--muted); }
-    .subline { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
-    nav { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .avatar img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display: block; 
+    }
+
+    h1 { 
+      margin: 0; 
+      font-size: 26px; 
+      letter-spacing: .2px; 
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      font-weight: 900;
+    }
+
+    .headline { 
+      margin: 5px 0 0; 
+      font-size: 14px; 
+      color: var(--muted); 
+      font-weight: 500;
+    }
+
+    .subline { 
+      margin: 6px 0 0; 
+      font-size: 12px; 
+      color: var(--muted); 
+    }
+
+    nav { 
+      display: flex; 
+      gap: 10px; 
+      flex-wrap: wrap; 
+      align-items: center; 
+    }
 
     .pill {
       display: inline-flex;
@@ -78,12 +136,30 @@
       border-radius: 999px;
       color: var(--text);
       font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
 
-    .pill:hover { text-decoration: none; background: rgba(255, 255, 255, .07); }
-    main { padding: 10px 0 70px; }
-    .grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 16px; }
-    @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } }
+    .pill:hover { 
+      text-decoration: none; 
+      background: rgba(255, 255, 255, .07);
+      border-color: var(--accent);
+    }
+
+    main { 
+      padding: 10px 0 70px; 
+    }
+
+    .grid { 
+      display: grid; 
+      grid-template-columns: 1.25fr .75fr; 
+      gap: 16px; 
+    }
+
+    @media (max-width: 980px) { 
+      .grid { grid-template-columns: 1fr; } 
+    }
 
     .card {
       background: var(--card);
@@ -91,11 +167,24 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 18px;
+      transition: all 0.3s ease;
     }
 
-    .card h2 { margin: 0 0 10px; font-size: 16px; letter-spacing: .2px; }
-    .muted { color: var(--muted); }
-    .cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .card:hover {
+      border-color: rgba(122, 162, 255, 0.3);
+      box-shadow: 0 14px 34px rgba(122, 162, 255, 0.1);
+    }
+
+    .muted { 
+      color: var(--muted); 
+    }
+
+    .cta { 
+      display: flex; 
+      gap: 10px; 
+      flex-wrap: wrap; 
+      margin-top: 12px; 
+    }
 
     .btn {
       display: inline-flex;
@@ -107,16 +196,51 @@
       background: rgba(122, 162, 255, .18);
       color: var(--text);
       font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
 
-    .btn.secondary { background: rgba(255, 255, 255, .04); }
-    .btn:hover { text-decoration: none; filter: brightness(1.05); }
-    .kvs { display: grid; grid-template-columns: 130px 1fr; gap: 8px 12px; }
-    @media (max-width: 520px) { .kvs { grid-template-columns: 1fr; } }
-    .kvs .k { font-weight: 800; color: var(--text); }
-    .kvs .v { color: var(--muted); }
-    .section { display: grid; gap: 16px; margin-top: 16px; }
-    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .btn.secondary { 
+      background: rgba(255, 255, 255, .04); 
+    }
+
+    .btn:hover { 
+      text-decoration: none; 
+      filter: brightness(1.05);
+      border-color: var(--accent);
+    }
+
+    .kvs { 
+      display: grid; 
+      grid-template-columns: 130px 1fr; 
+      gap: 8px 12px; 
+    }
+
+    @media (max-width: 520px) { 
+      .kvs { grid-template-columns: 1fr; } 
+    }
+
+    .kvs .k { 
+      font-weight: 800; 
+      color: var(--text); 
+    }
+
+    .kvs .v { 
+      color: var(--muted); 
+    }
+
+    .section { 
+      display: grid; 
+      gap: 16px; 
+      margin-top: 16px; 
+    }
+
+    .chips { 
+      display: flex; 
+      gap: 8px; 
+      flex-wrap: wrap; 
+      margin-top: 10px; 
+    }
 
     .chip {
       display: inline-flex;
@@ -127,21 +251,31 @@
       border-radius: 999px;
       border: 1px solid rgba(122, 255, 208, .20);
       background: rgba(122, 255, 208, .10);
+      font-weight: 500;
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
+      margin-top: 10px;
     }
 
-    @media (max-width: 980px) { .projects-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 980px) { 
+      .projects-grid { grid-template-columns: 1fr; } 
+    }
 
     .proj {
       border: 1px solid var(--border);
       background: var(--card2);
       border-radius: 16px;
       overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .proj:hover {
+      border-color: rgba(122, 162, 255, 0.3);
+      transform: translateY(-2px);
     }
 
     .proj img {
@@ -152,17 +286,47 @@
       background: rgba(0, 0, 0, .20);
     }
 
-    .proj-body { padding: 14px; }
-    .proj-title { margin: 0 0 6px; font-weight: 900; }
-    .proj-desc { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
-    .proj-links a { margin-right: 10px; font-weight: 900; }
-    .items { display: grid; gap: 10px; }
+    .proj-body { 
+      padding: 14px; 
+    }
+
+    .proj-title { 
+      margin: 0 0 6px; 
+      font-weight: 900;
+    }
+
+    .proj-desc { 
+      margin: 0 0 10px; 
+      font-size: 14px; 
+      color: var(--muted); 
+    }
+
+    .proj-links { 
+      margin-top: 8px; 
+    }
+
+    .proj-links a { 
+      margin-right: 10px; 
+      font-weight: 900; 
+    }
+
+    .items { 
+      display: grid; 
+      gap: 10px; 
+    }
+
     .item {
-      padding: 12px 12px;
+      padding: 12px;
       border: 1px solid var(--border);
       border-radius: 14px;
       background: rgba(255, 255, 255, .03);
-      margin-bottom: 8px;
+      margin-bottom: 0;
+      transition: all 0.2s ease;
+    }
+
+    .item:hover {
+      border-color: rgba(122, 162, 255, 0.3);
+      background: rgba(255, 255, 255, .05);
     }
 
     .item-top {
@@ -173,11 +337,54 @@
       align-items: baseline;
     }
 
-    .item-title { font-weight: 900; }
-    .item-meta { color: var(--muted); font-size: 13px; }
-    
-    .small { font-size: 12px; color: var(--muted); }
-    .divider { height: 1px; background: var(--border); margin: 12px 0; }
+    .item-title { 
+      font-weight: 900; 
+      margin: 0;
+      word-break: break-word;
+    }
+
+    .item-title a {
+      color: var(--accent);
+    }
+
+    .item-title a:hover {
+      text-decoration: underline;
+    }
+
+    .item-meta { 
+      color: var(--muted); 
+      font-size: 13px; 
+      white-space: nowrap;
+    }
+
+    .item-desc {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .item-bullets {
+      margin-top: 8px;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .item-bullets li {
+      margin-bottom: 4px;
+    }
+
+    .small { 
+      font-size: 12px; 
+      color: var(--muted); 
+    }
+
+    .divider { 
+      height: 1px; 
+      background: var(--border); 
+      margin: 12px 0; 
+    }
+
     footer {
       padding: 18px;
       text-align: center;
@@ -201,13 +408,13 @@
   <header class="wrap">
     <div class="top">
       <div class="brand">
-        <div class="avatar" id="avatarBox" aria-hidden="true">
-          <img src="Ashita_Photo.png" alt="Ashita Jawali">
+        <div class="avatar" aria-hidden="true">
+          <img src="Ashita_Photo.png" alt="Ashita Jawali" style="background: linear-gradient(135deg, #7aa2ff, #7affd0);">
         </div>
         <div>
-          <h1 id="name"></h1>
-          <div class="headline" id="headline"></div>
-          <div class="subline" id="subline"></div>
+          <h1>Ashita Jawali</h1>
+          <div class="headline">Bioinformatician | Multi-omics | AI/ML | Drug Discovery | Biomarker Discovery</div>
+          <div class="subline">Topeka, Kansas, USA</div>
         </div>
       </div>
 
@@ -224,294 +431,311 @@
 
   <main class="wrap grid">
     <div class="section">
+      <!-- ABOUT SECTION -->
       <section class="card" id="about">
         <h2>About</h2>
-        <p class="muted" id="aboutText"></p>
-        <div class="cta" id="cta"></div>
+        <p class="muted">
+          Bioinformatician working at the intersection of multi-omics, machine learning, and drug discovery. My work focuses on analyzing large-scale genomic and transcriptomic datasets, building reproducible bioinformatics pipelines, and applying computational approaches to biomarker discovery and disease research.
+        </p>
+        <div class="cta">
+          <a class="btn" href="https://github.com/Ashita2619" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/ashita-jawali-9a6872198/" target="_blank">LinkedIn</a>
+          <a class="btn secondary" href="AshitaJawali_CV.pdf" target="_blank">CV (PDF)</a>
+        </div>
         <div class="divider"></div>
         <div>
-          <div class="item-title">Core areas</div>
-          <div class="chips" id="focusChips"></div>
+          <div style="font-weight: 900; margin-bottom: 8px;">Core areas</div>
+          <div class="chips">
+            <span class="chip">Bioinformatics</span>
+            <span class="chip">Multi-omics</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Drug Discovery</span>
+            <span class="chip">Biomarker Discovery</span>
+            <span class="chip">RNA-seq</span>
+            <span class="chip">Variant Calling</span>
+            <span class="chip">NGS Analysis</span>
+            <span class="chip">Public Health Genomics</span>
+            <span class="chip">Pipeline Development</span>
+          </div>
         </div>
       </section>
 
+      <!-- PROJECTS SECTION -->
       <section class="card" id="projects">
-        <h2>Selected projects</h2>
-        <div class="projects-grid" id="projectsGrid"></div>
+        <h2>Selected Projects</h2>
+        <div class="projects-grid">
+          <div class="proj">
+            <img src="https://via.placeholder.com/400x180?text=PDACmod" alt="PDACmod Project">
+            <div class="proj-body">
+              <div class="proj-title">PDACmod</div>
+              <div class="proj-desc">Deep learning pipeline for discovering dual-targeted KRAS/SMAD4 inhibitors for pancreatic cancer drug discovery.</div>
+              <div class="proj-links">
+                <a href="https://github.com/omicscodeathon/pdacmod" target="_blank">GitHub</a>
+                <a href="#">Docs</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://via.placeholder.com/400x180?text=BioWordle" alt="BioWordle Project">
+            <div class="proj-body">
+              <div class="proj-title">BioWordle</div>
+              <div class="proj-desc">Biology-themed Wordle game where players guess five-letter bioinformatics and biology terms. Built with HTML, CSS, JavaScript, Python, and Flask.</div>
+              <div class="proj-links">
+                <a href="https://github.com/Ashita2619/BioWordle" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://via.placeholder.com/400x180?text=Lung+Cancer+Biomarkers" alt="Lung Cancer Biomarkers">
+            <div class="proj-body">
+              <div class="proj-title">Novel Biomarker Prediction for Lung Cancer</div>
+              <div class="proj-desc">RNA-seq analysis and machine learning pipeline to identify novel biomarkers for lung cancer prognosis and treatment selection.</div>
+              <div class="proj-links">
+                <a href="#">Publication</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <!-- EXPERIENCE SECTION -->
       <section class="card" id="experience">
         <h2>Experience</h2>
-        <div class="items" id="expItems"></div>
+        <div class="items">
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Bioinformatician</div>
+              <div class="item-meta">Feb 2024 – Present</div>
+            </div>
+            <div class="muted" style="margin-top: 4px;">Kansas Department of Health and Environment | Topeka, KS</div>
+            <ul class="item-bullets">
+              <li>Designed and maintained NGS analysis pipelines for newborn screening and pathogen surveillance</li>
+              <li>Performed QC, genome assembly, annotation, and variant calling on high-throughput sequencing data</li>
+              <li>Built standardized workflows and SOPs using Python and Nextflow</li>
+              <li>Collaborated with health program managers to translate genomic results into actionable insights</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Computational Biologist</div>
+              <div class="item-meta">Feb 2026 – Present</div>
+            </div>
+            <div class="muted" style="margin-top: 4px;">BitGenome Institute of Technology | Remote</div>
+            <ul class="item-bullets">
+              <li>Guest lecturer providing expertise on technical topics and modern programming languages</li>
+              <li>Mentoring bioinformaticians on practical pipeline development and genomic data analysis</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Graduate Teaching Assistant</div>
+              <div class="item-meta">Aug 2023 – Dec 2023</div>
+            </div>
+            <div class="muted" style="margin-top: 4px;">Carnegie Mellon University | Pittsburgh, PA</div>
+            <ul class="item-bullets">
+              <li>Taught statistical programming and modern biology to graduate students</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Graduate Research Intern</div>
+              <div class="item-meta">Jan 2023 – Dec 2023</div>
+            </div>
+            <div class="muted" style="margin-top: 4px;">Dr. Hiller Lab, Carnegie Mellon University | Pittsburgh, PA</div>
+            <ul class="item-bullets">
+              <li>Investigated evolutionary history of mobile elements in Streptococcus thermophilus</li>
+              <li>Built Python-based pipelines for sequence annotation and comparative genomics</li>
+              <li>Performed BLAST, sequence alignment, and phylogenetic analysis</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Associate Consultant</div>
+              <div class="item-meta">Feb 2022 – Aug 2022</div>
+            </div>
+            <div class="muted" style="margin-top: 4px;">IQVIA | Bengaluru, India</div>
+            <ul class="item-bullets">
+              <li>Queried and analyzed large-scale clinical datasets using SQL/PLSQL</li>
+              <li>Built dashboards in Power BI to communicate pharmacovigilance insights</li>
+              <li>Gained exposure to drug development lifecycle and regulatory systems</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
+      <!-- PUBLICATIONS SECTION -->
       <section class="card" id="publications">
         <h2>Publications</h2>
-        <div class="items" id="pubItems"></div>
+        <div class="items">
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title"><a href="https://www.researchgate.net/publication/355277721_Methods_for_the_Detection_and_Quantification_of_Micro_and_Nanoplastics-_A_Review" target="_blank">Methods for the Detection and Quantification of Micro and Nanoplastics: A Review</a></div>
+              <div class="item-meta">2021</div>
+            </div>
+            <div class="muted" style="margin-top: 4px;">Asian Journal of Biotechnology and Bioresource Technology</div>
+          </div>
+        </div>
       </section>
 
+      <!-- ABSTRACTS SECTION -->
       <section class="card" id="abstracts">
-        <h2>Conference abstracts</h2>
-        <div class="items" id="absItems"></div>
+        <h2>Conference Abstracts & Presentations</h2>
+        <div class="items">
+          <div class="item">
+            <div class="item-title">ISCB-UK 2026 Poster Presentation (Selected)</div>
+            <div class="item-desc">Computational approaches to biomarker discovery in cancer genomics</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title"><a href="https://www.researchhub.com/proposal/4347/early-detection-and-personalized-drug-discovery-for-pancreatic-cancer-using-multi-omics-and-aiml-approaches" target="_blank">Research Hub Grant Proposal Submitted</a></div>
+            <div class="item-desc">Early Detection and Personalized Drug Discovery for Pancreatic Cancer Using Multi-Omics and AI/ML Approaches</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">ISMB 2026 Abstract Submitted</div>
+            <div class="item-desc">Submitted for both talk and poster presentation on multi-omics integration in cancer research</div>
+          </div>
+        </div>
       </section>
     </div>
 
+    <!-- RIGHT SIDEBAR -->
     <div class="section">
+      <!-- QUICK INFO -->
       <aside class="card">
-        <h2>Quick info</h2>
-        <div class="kvs" id="quickInfo"></div>
+        <h2>Quick Info</h2>
+        <div class="kvs">
+          <div class="k">Location</div>
+          <div class="v">Topeka, Kansas, USA</div>
+          <div class="k">Email</div>
+          <div class="v"><a href="mailto:ashita.bt18@bmsce.ac.in">ashita.bt18@bmsce.ac.in</a></div>
+        </div>
         <div class="divider"></div>
-        <div class="small" id="updated"></div>
+        <div class="small">Updated: April 2026</div>
       </aside>
 
+      <!-- EDUCATION -->
       <aside class="card" id="education">
         <h2>Education</h2>
-        <div class="items" id="eduItems"></div>
+        <div class="items">
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Master's Degree</div>
+              <div class="item-meta">2023</div>
+            </div>
+            <div class="muted">Carnegie Mellon University</div>
+            <div class="small" style="margin-top: 4px;">Quantitative Biology and Bioinformatics</div>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">Bachelor's Degree</div>
+              <div class="item-meta">2022</div>
+            </div>
+            <div class="muted">B.M.S. College of Engineering</div>
+            <div class="small" style="margin-top: 4px;">Biotechnology (GPA: 8.56/10)</div>
+          </div>
+        </div>
       </aside>
 
+      <!-- SKILLS -->
       <aside class="card" id="skills">
         <h2>Skills</h2>
-        <div class="chips" id="skillChips"></div>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">R</span>
+          <span class="chip">Bioinformatics</span>
+          <span class="chip">NGS</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Nextflow</span>
+          <span class="chip">Docker</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Bash</span>
+          <span class="chip">Git</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Molecular Docking</span>
+          <span class="chip">ADMET</span>
+          <span class="chip">RNA-seq</span>
+          <span class="chip">Variant Calling</span>
+        </div>
       </aside>
 
+      <!-- LANGUAGES -->
       <aside class="card" id="languages">
         <h2>Languages</h2>
-        <div class="chips" id="languageChips"></div>
+        <div class="chips">
+          <span class="chip">English (Professional)</span>
+          <span class="chip">Hindi (Elementary)</span>
+          <span class="chip">Kannada (Native)</span>
+          <span class="chip">Telugu</span>
+        </div>
       </aside>
 
+      <!-- MEMBERSHIPS -->
       <aside class="card" id="memberships">
         <h2>Memberships</h2>
-        <div class="items" id="membershipItems"></div>
+        <div class="items">
+          <div class="item">
+            <div class="item-top">
+              <div class="item-title">International Society for Computational Biology (ISCB)</div>
+              <div class="item-meta">2026 – Present</div>
+            </div>
+          </div>
+        </div>
       </aside>
 
+      <!-- CONTACT -->
       <aside class="card" id="contact">
         <h2>Contact</h2>
-        <div class="items" id="contactBlocks"></div>
+        <div class="items">
+          <div class="item">
+            <div class="item-title">Email</div>
+            <div class="muted"><a href="mailto:ashita.bt18@bmsce.ac.in">ashita.bt18@bmsce.ac.in</a></div>
+          </div>
+          <div class="item">
+            <div class="item-title">Location</div>
+            <div class="muted">Topeka, Kansas, USA</div>
+          </div>
+          <div class="item">
+            <div class="item-title">GitHub</div>
+            <div class="muted"><a href="https://github.com/Ashita2619" target="_blank">github.com/Ashita2619</a></div>
+          </div>
+          <div class="item">
+            <div class="item-title">LinkedIn</div>
+            <div class="muted"><a href="https://www.linkedin.com/in/ashita-jawali-9a6872198/" target="_blank">linkedin.com/in/ashita-jawali</a></div>
+          </div>
+        </div>
       </aside>
     </div>
   </main>
 
   <footer>
-    © <span id="year"></span> <span id="name2"></span>
+    © <span id="year"></span> Ashita Jawali
   </footer>
 
   <script>
-    const SITE = {
-      name: "Ashita Jawali",
-      headline: "Bioinformatician | Multi-omics | AI/ML | Drug Discovery | Biomarker Discovery | NGS | Public Health Genomics",
-      location: "Topeka, Kansas, USA",
-      emailPrimary: "ashit.bt18@bmsce.ac.in",
-      github: "https://github.com/yourgithub",
-      linkedin: "https://linkedin.com/in/yourlinkedin",
-      updated: "Updated: 2026",
+    // Set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-      links: [
-        { label: "GitHub", url: "https://github.com/Ashita2619", primary: true },
-        { label: "LinkedIn", url: "https://www.linkedin.com/in/ashita-jawali-9a6872198/" },
-        { label: "CV (PDF)", url: "AshitaJawali_CV.pdf" }
-      ],
-
-      about: "Bioinformatician working at the intersection of multi-omics, machine learning, and drug discovery. My work focuses on analyzing large-scale genomic and transcriptomic datasets, building reproducible bioinformatics pipelines, and applying computational approaches to biomarker discovery and disease research.",
-
-      focus: [
-        "Bioinformatics", "Multi-omics", "Machine Learning", "Drug Discovery",
-        "Biomarker Discovery", "RNA-seq", "Variant Calling", "NGS Analysis",
-        "Public Health Genomics", "Pipeline Development"
-      ],
-
-      experience: [
-        {
-          title: "Bioinformatician",
-          org: "Kansas Department of Health and Environment",
-          location: "Kansas, USA",
-          dates: "2024 – Present",
-          bullets: [
-            "Analyzed NGS data for public health genomics and pathogen surveillance.",
-            "Developed bioinformatics pipelines for genomic data processing."
-          ]
-        },
-        {
-          title: "Graduate Teaching Assistant",
-          org: "Carnegie Mellon University",
-          location: "Pennsylvania, USA",
-          dates: "2022 – 2023"
-        },
-        {
-          title: "Research Intern",
-          org: "Dr. Hiller Lab, CMU",
-          location: "Pennsylvania, USA",
-          dates: "2022 – 2023",
-          bullets: [
-            "Analyzed mobile elements in Streptococcus thermophilus, identifying transporters and regulatory regions",
-            "Built Python-based pipelines for sequence annotation and comparative genomics",
-            "Performed BLAST, multiple sequence alignment, and domain analysis",
-            "Conducted phylogenetic analysis to trace gene transfer events"
-          ]
-        },
-        {
-          title: "Associate Consultant",
-          org: "IQVIA",
-          location: "Karnataka, India",
-          dates: "2022 – 2022",
-          bullets: [
-            "Queried and analyzed large-scale clinical datasets using SQL/PLSQL",
-            "Built dashboards in Power BI to communicate pharmacovigilance insights",
-            "Gained exposure to drug development lifecycle and regulatory systems (Argus Safety)"
-          ]
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
         }
-      ],
-
-      education: [
-        { title: "Master's Degree", org: "Carnegie Mellon University", dates: "2023" },
-        { title: "Bachelor's Degree", org: "BMS College of Engineering", dates: "2022" }
-      ],
-
-      skills: ["Python", "R", "Bioinformatics", "NGS", "Linux", "Nextflow", "Docker"],
-      languages: ["English", "Hindi", "Kannada", "Telugu"],
-      
-      publications: [
-        { 
-          title: "Methods for the Detection and Quantification of Micro and Nanoplastics- A Review", 
-          venue: "Asian Journal of Biotechnology and Bioresource Technology", 
-          year: "2021", 
-          url: "https://www.researchgate.net/publication/355277721_Methods_for_the_Detection_and_Quantification_of_Micro_and_Nanoplastics-_A_Review" 
-        }
-      ],
-
-      abstracts: [
-         {
-           title: "Poster presentation - ISCB-UK 2026 (Selected)"
-         },
-         {
-           title: "Research Hub Grant Proposal Submitted",
-           description: "Early Detection and Personalized Drug Discovery for Pancreatic Cancer Using Multi-Omics and AI/ML Approaches",
-           url: "https://www.researchhub.com/proposal/4347/early-detection-and-personalized-drug-discovery-for-pancreatic-cancer-using-multi-omics-and-aiml-approaches"
-         },
-         {
-           title: "ISMB 2026 abstract submitted for talk and poster"
-         }
-       ],
-
-      memberships: [
-        { title: "International Society for Computational Biology (ISCB)", dates: "2026 – Present" }
-      ],
-
-      contact: {
-        email: "ashit.bt18@bmsce.ac.in",
-        location: "Topeka, Kansas, USA"
-      }
-    };
-
-    // ---------- Rendering Engine ----------
-    const el = (id) => document.getElementById(id);
-    const safeLink = (u) => (u && u !== "#") ? u : "#";
-
-    // Header & Intro
-    el("name").textContent = SITE.name;
-    el("name2").textContent = SITE.name;
-    el("headline").textContent = SITE.headline;
-    el("updated").textContent = SITE.updated || "";
-    el("year").textContent = new Date().getFullYear();
-    el("aboutText").textContent = SITE.about;
-
-    // CTA Buttons
-    SITE.links.forEach(b => {
-      const a = document.createElement("a");
-      a.className = "btn" + (b.primary ? "" : " secondary");
-      a.href = safeLink(b.url);
-      a.textContent = b.label;
-      el("cta").appendChild(a);
+      });
     });
-
-    // Core Area Chips
-    SITE.focus.forEach(t => {
-      const s = document.createElement("span");
-      s.className = "chip";
-      s.textContent = t;
-      el("focusChips").appendChild(s);
-    });
-
-    // Quick Info Table
-    const quickRows = [["Location", SITE.location], ["Email", SITE.emailPrimary]];
-    quickRows.forEach(([k, v]) => {
-      const kDiv = document.createElement("div"); kDiv.className = "k"; kDiv.textContent = k;
-      const vDiv = document.createElement("div"); vDiv.className = "v"; vDiv.textContent = v;
-      el("quickInfo").appendChild(kDiv); el("quickInfo").appendChild(vDiv);
-    });
-
-    // Experience (with Bullets)
-    SITE.experience.forEach(e => {
-      const d = document.createElement("div");
-      d.className = "item";
-      const bulletHtml = e.bullets 
-        ? `<ul class="muted small" style="margin-top: 8px; padding-left: 20px;">
-            ${e.bullets.map(b => `<li>${b}</li>`).join('')}
-           </ul>` 
-        : '';
-      d.innerHTML = `
-        <div class="item-top"><div class="item-title">${e.title}</div><div class="item-meta">${e.dates}</div></div>
-        <div class="muted">${e.org} · ${e.location}</div>
-        ${bulletHtml}`;
-      el("expItems").appendChild(d);
-    });
-
-    // Skills & Languages
-    SITE.skills.forEach(s => {
-      const chip = document.createElement("span"); chip.className = "chip"; chip.textContent = s;
-      el("skillChips").appendChild(chip);
-    });
-    SITE.languages.forEach(l => {
-      const chip = document.createElement("span"); chip.className = "chip"; chip.textContent = l;
-      el("languageChips").appendChild(chip);
-    });
-
-    // Education
-    SITE.education.forEach(edu => {
-      const d = document.createElement("div");
-      d.className = "item";
-      d.innerHTML = `<div class="item-top"><div class="item-title">${edu.title}</div><div class="item-meta">${edu.dates}</div></div>
-                     <div class="muted">${edu.org}</div>`;
-      el("eduItems").appendChild(d);
-    });
-
-    // Publications
-    SITE.publications.forEach(p => {
-      const d = document.createElement("div");
-      d.className = "item";
-      d.innerHTML = `<div class="item-top">
-                       <div class="item-title"><a href="${p.url}" target="_blank">${p.title}</a></div>
-                       <div class="item-meta">${p.venue} · ${p.year}</div>
-                     </div>`;
-      el("pubItems").appendChild(d);
-    });
-
-    // Abstracts Fallback
-    SITE.abstracts.forEach(a => {
-      const d = document.createElement("div");
-      d.className = "item";
-
-      d.innerHTML = `
-        <div class="item-title">
-          ${a.url ? `<a href="${a.url}" target="_blank">${a.title}</a>` : a.title}
-        </div>
-        ${a.description ? `<div class="muted small">${a.description}</div>` : ""}
-        `;
-         el("absItems").appendChild(d);
-    });
-
-    // Memberships
-    SITE.memberships.forEach(m => {
-      const d = document.createElement("div");
-      d.className = "item";
-      d.innerHTML = `<div class="item-top"><div class="item-title">${m.title}</div><div class="item-meta">${m.dates}</div></div>`;
-      el("membershipItems").appendChild(d);
-    });
-
-    // Contact Box
-    el("contactBlocks").innerHTML = `
-      <div class="item"><div class="item-title">Email</div><div class="muted">${SITE.contact.email}</div></div>
-      <div class="item"><div class="item-title">Location</div><div class="muted">${SITE.contact.location}</div></div>`;
-
   </script>
 </body>
 </html>
