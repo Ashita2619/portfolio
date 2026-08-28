@@ -20,7 +20,9 @@
       --max: 1120px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html, body {
       margin: 0;
@@ -40,24 +42,25 @@
       background-filter: blur(2px);
     }
 
-    a { 
-      color: var(--accent); 
-      text-decoration: none; 
+    a {
+      color: var(--accent);
+      text-decoration: none;
       transition: all 0.2s ease;
     }
-    a:hover { 
-      text-decoration: underline; 
+
+    a:hover {
+      text-decoration: underline;
       filter: brightness(1.2);
     }
 
-    .wrap { 
-      max-width: var(--max); 
-      margin: 0 auto; 
-      padding: 0 18px; 
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 18px;
     }
 
-    header { 
-      padding: 44px 0 14px; 
+    header {
+      padding: 44px 0 14px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -69,11 +72,11 @@
       flex-wrap: wrap;
     }
 
-    .brand { 
-      display: flex; 
-      align-items: center; 
-      gap: 14px; 
-      min-width: 260px; 
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 260px;
     }
 
     .avatar {
@@ -87,17 +90,17 @@
       flex: 0 0 auto;
     }
 
-    .avatar img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; 
-      display: block; 
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    h1 { 
-      margin: 0; 
-      font-size: 26px; 
-      letter-spacing: .2px; 
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: .2px;
       font-weight: 900;
     }
 
@@ -108,24 +111,24 @@
       font-weight: 900;
     }
 
-    .headline { 
-      margin: 5px 0 0; 
-      font-size: 14px; 
-      color: var(--muted); 
+    .headline {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: var(--muted);
       font-weight: 500;
     }
 
-    .subline { 
-      margin: 6px 0 0; 
-      font-size: 12px; 
-      color: var(--muted); 
+    .subline {
+      margin: 6px 0 0;
+      font-size: 12px;
+      color: var(--muted);
     }
 
-    nav { 
-      display: flex; 
-      gap: 10px; 
-      flex-wrap: wrap; 
-      align-items: center; 
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     .pill {
@@ -143,24 +146,26 @@
       transition: all 0.2s ease;
     }
 
-    .pill:hover { 
-      text-decoration: none; 
+    .pill:hover {
+      text-decoration: none;
       background: rgba(255, 255, 255, .07);
       border-color: var(--accent);
     }
 
-    main { 
-      padding: 10px 0 70px; 
+    main {
+      padding: 10px 0 70px;
     }
 
-    .grid { 
-      display: grid; 
-      grid-template-columns: 1.25fr .75fr; 
-      gap: 16px; 
+    .grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 16px;
     }
 
-    @media (max-width: 980px) { 
-      .grid { grid-template-columns: 1fr; } 
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
@@ -177,15 +182,15 @@
       box-shadow: 0 14px 34px rgba(122, 162, 255, 0.1);
     }
 
-    .muted { 
-      color: var(--muted); 
+    .muted {
+      color: var(--muted);
     }
 
-    .cta { 
-      display: flex; 
-      gap: 10px; 
-      flex-wrap: wrap; 
-      margin-top: 12px; 
+    .cta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
     }
 
     .btn {
@@ -202,46 +207,48 @@
       transition: all 0.2s ease;
     }
 
-    .btn.secondary { 
-      background: rgba(255, 255, 255, .04); 
+    .btn.secondary {
+      background: rgba(255, 255, 255, .04);
     }
 
-    .btn:hover { 
-      text-decoration: none; 
+    .btn:hover {
+      text-decoration: none;
       filter: brightness(1.05);
       border-color: var(--accent);
     }
 
-    .kvs { 
-      display: grid; 
-      grid-template-columns: 130px 1fr; 
-      gap: 8px 12px; 
+    .kvs {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 8px 12px;
     }
 
-    @media (max-width: 520px) { 
-      .kvs { grid-template-columns: 1fr; } 
+    @media (max-width: 520px) {
+      .kvs {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .kvs .k { 
-      font-weight: 800; 
-      color: var(--text); 
+    .kvs .k {
+      font-weight: 800;
+      color: var(--text);
     }
 
-    .kvs .v { 
-      color: var(--muted); 
+    .kvs .v {
+      color: var(--muted);
     }
 
-    .section { 
-      display: grid; 
-      gap: 16px; 
-      margin-top: 16px; 
+    .section {
+      display: grid;
+      gap: 16px;
+      margin-top: 16px;
     }
 
-    .chips { 
-      display: flex; 
-      gap: 8px; 
-      flex-wrap: wrap; 
-      margin-top: 10px; 
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     .chip {
@@ -256,9 +263,9 @@
       font-weight: 500;
     }
 
-    .items { 
-      display: grid; 
-      gap: 10px; 
+    .items {
+      display: grid;
+      gap: 10px;
     }
 
     .item {
@@ -283,8 +290,8 @@
       align-items: baseline;
     }
 
-    .item-title { 
-      font-weight: 900; 
+    .item-title {
+      font-weight: 900;
       margin: 0;
       word-break: break-word;
     }
@@ -297,9 +304,9 @@
       text-decoration: underline;
     }
 
-    .item-meta { 
-      color: var(--muted); 
-      font-size: 13px; 
+    .item-meta {
+      color: var(--muted);
+      font-size: 13px;
       white-space: nowrap;
     }
 
@@ -337,15 +344,15 @@
       text-decoration: underline;
     }
 
-    .small { 
-      font-size: 12px; 
-      color: var(--muted); 
+    .small {
+      font-size: 12px;
+      color: var(--muted);
     }
 
-    .divider { 
-      height: 1px; 
-      background: var(--border); 
-      margin: 12px 0; 
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 12px 0;
     }
 
     footer {
@@ -358,11 +365,29 @@
     }
 
     @media print {
-      body { background: white; color: #111; }
-      a { color: #111; text-decoration: none; }
-      .pill, .btn { display: none !important; }
-      .card { box-shadow: none; background: white; border: 1px solid #ddd; }
-      footer { display: none; }
+      body {
+        background: white;
+        color: #111;
+      }
+
+      a {
+        color: #111;
+        text-decoration: none;
+      }
+
+      .pill, .btn {
+        display: none !important;
+      }
+
+      .card {
+        box-shadow: none;
+        background: white;
+        border: 1px solid #ddd;
+      }
+
+      footer {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -374,6 +399,7 @@
         <div class="avatar" aria-hidden="true">
           <img src="Ashita_Photo.png" alt="Ashita Jawali" style="background: linear-gradient(135deg, #7aa2ff, #7affd0);">
         </div>
+
         <div>
           <h1>Ashita Jawali</h1>
           <div class="headline">Bioinformatician | Multi-omics | AI/ML | Drug Discovery | Biomarker Discovery</div>
@@ -393,21 +419,29 @@
   </header>
 
   <main class="wrap grid">
+
+    <!-- LEFT COLUMN -->
     <div class="section">
+
       <!-- ABOUT SECTION -->
       <section class="card" id="about">
         <h2>About</h2>
+
         <p class="muted">
           Bioinformatician working at the intersection of multi-omics, machine learning, and drug discovery. My work focuses on analyzing large-scale genomic and transcriptomic datasets, building reproducible bioinformatics pipelines, and applying computational approaches to biomarker discovery and disease research.
         </p>
+
         <div class="cta">
           <a class="btn" href="https://github.com/Ashita2619" target="_blank">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/ashita-jawali-9a6872198/" target="_blank">LinkedIn</a>
           <a class="btn secondary" href="AshitaJawali_CV.pdf" target="_blank">CV (PDF)</a>
         </div>
+
         <div class="divider"></div>
+
         <div>
           <div style="font-weight: 900; margin-bottom: 8px;">Core areas</div>
+
           <div class="chips">
             <span class="chip">Bioinformatics</span>
             <span class="chip">Multi-omics</span>
@@ -426,19 +460,24 @@
       <!-- PROJECTS SECTION - SIMPLE TEXT ONLY -->
       <section class="card" id="projects">
         <h2>Academic Projects</h2>
+
         <div class="items">
+
           <div class="item">
             <div class="item-top">
               <div class="item-title">Novel Biomarker Prediction for Lung Cancer</div>
               <div class="item-meta">Dec 2023</div>
             </div>
+
             <div class="muted">Carnegie Mellon University</div>
+
             <ul class="item-bullets">
               <li>Performed RNA-seq preprocessing, normalization, and differential expression analysis for cancer biomarker discovery</li>
               <li>Applied machine learning and feature selection methods to identify predictive gene signatures (F1 scores 0.71-0.85)</li>
               <li>Conducted pathway-level interpretation to contextualize gene expression changes in tumor biology</li>
               <li>Generated publication-ready visualizations summarizing differential expression and predictive modeling performance</li>
             </ul>
+
             <div class="item-links">
               <a href="https://github.com/Ashita2619/Novel-Biomarker-Prediction-for-Lung-Cancer" target="_blank">GitHub</a>
             </div>
@@ -449,11 +488,14 @@
               <div class="item-title">Factors Impacting US COVID-19 Vaccine Adoption: A Statistical Exploration</div>
               <div class="item-meta">Dec 2023</div>
             </div>
+
             <div class="muted">Carnegie Mellon University</div>
+
             <ul class="item-bullets">
               <li>Applied ML models (Random Forest, XGBoost, SVM) to predict vaccine hesitancy based on socioeconomic factors</li>
               <li>Analyzed large-scale public health datasets to identify key drivers of vaccine adoption disparities</li>
             </ul>
+
             <div class="item-links">
               <a href="https://github.com/Ashita2619/COVID-19-Vaccine-Adoption-A-Statistical-Exploration" target="_blank">GitHub</a>
             </div>
@@ -464,12 +506,15 @@
               <div class="item-title">NexTSS: An ML Pipeline for Transcription Start Site Annotation</div>
               <div class="item-meta">Jan 2023</div>
             </div>
+
             <div class="muted">Carnegie Mellon University</div>
+
             <ul class="item-bullets">
               <li>Developed a deep learning model for transcription start site detection using PyTorch and HPC systems</li>
               <li>Implemented reproducible training workflows and cross-species validation</li>
               <li>Designed modular data preprocessing and evaluation pipelines, mirroring production ML development patterns</li>
             </ul>
+
             <div class="item-links">
               <a href="https://github.com/Ashita2619/Masters-Journey-Bioinformatics/blob/main/03713_tss_project.tar.gz" target="_blank">GitHub</a>
             </div>
@@ -480,11 +525,14 @@
               <div class="item-title">Prediction of Diabetes Based on Multiple Diagnostic and Lifestyle Features</div>
               <div class="item-meta">Jan 2023</div>
             </div>
+
             <div class="muted">Carnegie Mellon University</div>
+
             <ul class="item-bullets">
               <li>Developed a random forest-based predictive model for diabetes risk assessment, achieving 82.1% accuracy</li>
               <li>Performed feature engineering and hyperparameter optimization for model performance</li>
             </ul>
+
             <div class="item-links">
               <a href="https://github.com/Ashita2619/Diabetes-Prediction" target="_blank">GitHub</a>
             </div>
@@ -495,7 +543,9 @@
               <div class="item-title">In-Silico Approach of Inhibitors for SARS-COV2</div>
               <div class="item-meta">Jul 2022</div>
             </div>
+
             <div class="muted">B.M.S. College of Engineering</div>
+
             <ul class="item-bullets">
               <li>Conducted protein-ligand docking using iGEMDOCK to identify candidate inhibitory compounds targeting viral proteins</li>
               <li>Performed structural dataset curation and molecular interaction analysis supporting therapeutic discovery</li>
@@ -507,25 +557,32 @@
               <div class="item-title">Repurposing of Drugs and Combinatorial Approach for AML</div>
               <div class="item-meta">Jun 2021</div>
             </div>
+
             <div class="muted">B.M.S. College of Engineering</div>
+
             <ul class="item-bullets">
               <li>Performed structure-based virtual screening and ligand docking to evaluate candidate compounds</li>
               <li>Applied computational structural biology approaches to support therapeutic discovery efforts</li>
             </ul>
           </div>
+
         </div>
       </section>
 
       <!-- EXPERIENCE SECTION -->
       <section class="card" id="experience">
         <h2>Experience</h2>
+
         <div class="items">
+
           <div class="item">
             <div class="item-top">
               <div class="item-title">Bioinformatician</div>
               <div class="item-meta">Feb 2024 – Present</div>
             </div>
+
             <div class="muted" style="margin-top: 4px;">Kansas Department of Health and Environment | Topeka, KS</div>
+
             <ul class="item-bullets">
               <li>Designed and maintained NGS analysis pipelines for newborn screening and pathogen surveillance</li>
               <li>Performed QC, genome assembly, annotation, and variant calling on high-throughput sequencing data</li>
@@ -539,7 +596,9 @@
               <div class="item-title">Computational Biologist</div>
               <div class="item-meta">Feb 2026 – Present</div>
             </div>
+
             <div class="muted" style="margin-top: 4px;">BitGenome Institute of Technology | Remote</div>
+
             <ul class="item-bullets">
               <li>Guest lecturer providing expertise on technical topics and modern programming languages</li>
               <li>Mentoring bioinformaticians on practical pipeline development and genomic data analysis</li>
@@ -551,7 +610,9 @@
               <div class="item-title">Graduate Teaching Assistant</div>
               <div class="item-meta">Aug 2023 – Dec 2023</div>
             </div>
+
             <div class="muted" style="margin-top: 4px;">Carnegie Mellon University | Pittsburgh, PA</div>
+
             <ul class="item-bullets">
               <li>Taught statistical programming and modern biology to graduate students</li>
             </ul>
@@ -562,7 +623,9 @@
               <div class="item-title">Graduate Research Intern</div>
               <div class="item-meta">Jan 2023 – Dec 2023</div>
             </div>
+
             <div class="muted" style="margin-top: 4px;">Dr. Hiller Lab, Carnegie Mellon University | Pittsburgh, PA</div>
+
             <ul class="item-bullets">
               <li>Investigated evolutionary history of mobile elements in Streptococcus thermophilus</li>
               <li>Built Python-based pipelines for sequence annotation and comparative genomics</li>
@@ -575,25 +638,35 @@
               <div class="item-title">Associate Consultant</div>
               <div class="item-meta">Feb 2022 – Aug 2022</div>
             </div>
+
             <div class="muted" style="margin-top: 4px;">IQVIA | Bengaluru, India</div>
+
             <ul class="item-bullets">
               <li>Queried and analyzed large-scale clinical datasets using SQL/PLSQL</li>
               <li>Built dashboards in Power BI to communicate pharmacovigilance insights</li>
               <li>Gained exposure to drug development lifecycle and regulatory systems</li>
             </ul>
           </div>
+
         </div>
       </section>
 
       <!-- PUBLICATIONS SECTION -->
       <section class="card" id="publications">
         <h2>Publications</h2>
+
         <div class="items">
           <div class="item">
             <div class="item-top">
-              <div class="item-title"><a href="https://www.researchgate.net/publication/355277721_Methods_for_the_Detection_and_Quantification_of_Micro_and_Nanoplastics-_A_Review" target="_blank">Methods for the Detection and Quantification of Micro and Nanoplastics: A Review</a></div>
+              <div class="item-title">
+                <a href="https://www.researchgate.net/publication/355277721_Methods_for_the_Detection_and_Quantification_of_Micro_and_Nanoplastics-_A_Review" target="_blank">
+                  Methods for the Detection and Quantification of Micro and Nanoplastics: A Review
+                </a>
+              </div>
+
               <div class="item-meta">2021</div>
             </div>
+
             <div class="muted" style="margin-top: 4px;">Asian Journal of Biotechnology and Bioresource Technology</div>
           </div>
         </div>
@@ -602,49 +675,82 @@
       <!-- ABSTRACTS SECTION -->
       <section class="card" id="abstracts">
         <h2>Conference Abstracts & Presentations</h2>
+
         <div class="items">
+
           <div class="item">
-            <div class="item-title">ISCB-UK 2026 Poster Presentation (Selected)</div>
-            <div class="item-desc">Computational approaches to biomarker discovery in cancer genomics</div>
+            <div class="item-title">
+              Targeted Drug Discovery for Pancreatic Cancer Using KRAS and SMAD4 with Deep Learning
+            </div>
+
+            <div class="item-desc">
+              Computational drug discovery study integrating deep learning, molecular docking,
+              and molecular dynamics simulations to investigate KRAS and SMAD4 as therapeutic targets
+              in pancreatic cancer.
+            </div>
+
+            <div class="item-desc">
+              <strong>Presentations:</strong>
+              ISMB 2026 — Poster Presentation, Washington, DC;
+              ISCB-UK 2026 — Poster Selected.
+            </div>
           </div>
 
           <div class="item">
-            <div class="item-title"><a href="https://www.researchhub.com/proposal/4347/early-detection-and-personalized-drug-discovery-for-pancreatic-cancer-using-multi-omics-and-aiml-approaches" target="_blank">Research Hub Grant Proposal Submitted</a></div>
-            <div class="item-desc">Early Detection and Personalized Drug Discovery for Pancreatic Cancer Using Multi-Omics and AI/ML Approaches</div>
+            <div class="item-title">
+              <a
+                href="https://www.researchhub.com/proposal/4347/early-detection-and-personalized-drug-discovery-for-pancreatic-cancer-using-multi-omics-and-aiml-approaches"
+                target="_blank"
+              >
+                Research Hub Grant Proposal
+              </a>
+            </div>
+
+            <div class="item-desc">
+              Early Detection and Personalized Drug Discovery for Pancreatic Cancer Using
+              Multi-Omics and AI/ML Approaches
+            </div>
           </div>
 
-          <div class="item">
-            <div class="item-title">ISMB 2026 Abstract Submitted</div>
-            <div class="item-desc">Submitted for both talk and poster presentation on multi-omics integration in cancer research</div>
-          </div>
         </div>
       </section>
+
     </div>
 
     <!-- RIGHT SIDEBAR -->
     <div class="section">
+
       <!-- QUICK INFO -->
       <aside class="card">
         <h2>Quick Info</h2>
+
         <div class="kvs">
           <div class="k">Location</div>
           <div class="v">Topeka, Kansas, USA</div>
+
           <div class="k">Email</div>
-          <div class="v"><a href="mailto:ashita.bt18@bmsce.ac.in">ashita.bt18@bmsce.ac.in</a></div>
+          <div class="v">
+            <a href="mailto:ashita.bt18@bmsce.ac.in">ashita.bt18@bmsce.ac.in</a>
+          </div>
         </div>
+
         <div class="divider"></div>
+
         <div class="small">Updated: April 2026</div>
       </aside>
 
       <!-- EDUCATION -->
       <aside class="card" id="education">
         <h2>Education</h2>
+
         <div class="items">
+
           <div class="item">
             <div class="item-top">
               <div class="item-title">Master's Degree</div>
               <div class="item-meta">2023</div>
             </div>
+
             <div class="muted">Carnegie Mellon University</div>
             <div class="small" style="margin-top: 4px;">Quantitative Biology and Bioinformatics</div>
           </div>
@@ -654,15 +760,18 @@
               <div class="item-title">Bachelor's Degree</div>
               <div class="item-meta">2022</div>
             </div>
+
             <div class="muted">B.M.S. College of Engineering</div>
             <div class="small" style="margin-top: 4px;">Biotechnology (GPA: 8.56/10)</div>
           </div>
+
         </div>
       </aside>
 
       <!-- SKILLS -->
       <aside class="card" id="skills">
         <h2>Skills</h2>
+
         <div class="chips">
           <span class="chip">Python</span>
           <span class="chip">R</span>
@@ -685,6 +794,7 @@
       <!-- LANGUAGES -->
       <aside class="card" id="languages">
         <h2>Languages</h2>
+
         <div class="chips">
           <span class="chip">English (Professional)</span>
           <span class="chip">Hindi (Elementary)</span>
@@ -696,6 +806,7 @@
       <!-- MEMBERSHIPS -->
       <aside class="card" id="memberships">
         <h2>Memberships</h2>
+
         <div class="items">
           <div class="item">
             <div class="item-top">
@@ -709,25 +820,40 @@
       <!-- CONTACT -->
       <aside class="card" id="contact">
         <h2>Contact</h2>
+
         <div class="items">
+
           <div class="item">
             <div class="item-title">Email</div>
-            <div class="muted"><a href="mailto:ashita.bt18@bmsce.ac.in">ashita.bt18@bmsce.ac.in</a></div>
+            <div class="muted">
+              <a href="mailto:ashita.bt18@bmsce.ac.in">ashita.bt18@bmsce.ac.in</a>
+            </div>
           </div>
+
           <div class="item">
             <div class="item-title">Location</div>
             <div class="muted">Topeka, Kansas, USA</div>
           </div>
+
           <div class="item">
             <div class="item-title">GitHub</div>
-            <div class="muted"><a href="https://github.com/Ashita2619" target="_blank">github.com/Ashita2619</a></div>
+            <div class="muted">
+              <a href="https://github.com/Ashita2619" target="_blank">github.com/Ashita2619</a>
+            </div>
           </div>
+
           <div class="item">
             <div class="item-title">LinkedIn</div>
-            <div class="muted"><a href="https://www.linkedin.com/in/ashita-jawali-9a6872198/" target="_blank">linkedin.com/in/ashita-jawali</a></div>
+            <div class="muted">
+              <a href="https://www.linkedin.com/in/ashita-jawali-9a6872198/" target="_blank">
+                linkedin.com/in/ashita-jawali
+              </a>
+            </div>
           </div>
+
         </div>
       </aside>
+
     </div>
   </main>
 
@@ -743,9 +869,12 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
+
         if (href !== '#') {
           e.preventDefault();
+
           const target = document.querySelector(href);
+
           if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
           }
